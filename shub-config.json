@@ -1,0 +1,14 @@
+{
+    "version": "",
+    "username": "Filipe Leuch Bonfim",
+    "github_username": "filipe1309",
+    "project_name": "Clean TS API",
+    "project_repo_name": "rm-clean-ts-api",
+    "project_repo_link": "https://github.com/filipe1309/rm-clean-ts-api.git",
+    "course_source": "Udemy",
+    "course_name": "NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID",
+    "course_link": "https://www.udemy.com/course/tdd-com-mango/",
+    "course_type": "class",
+    "course_multiple": "false",
+    "vcs": "false"
+}
