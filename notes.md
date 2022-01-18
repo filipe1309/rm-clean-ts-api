@@ -36,6 +36,12 @@ npm install --save-dev \
   eslint-plugin-node@^11.1.0 \
   @typescript-eslint/eslint-plugin@^4.0.1 \
   eslint-config-standard-with-typescript@latest
+
+git commit --amend --no-edit
+
+npm i -D husky
+# To only lint file in git staging area
+npm i -D lint-staged
 ```
 
 https://www.conventionalcommits.org/en/v1.0.0/
@@ -45,3 +51,7 @@ https://www.npmjs.com/package/git-commit-msg-linter
 https://standardjs.com/
 
 https://github.com/standard/eslint-config-standard-with-typescript
+
+https://www.npmjs.com/package/husky
+
+https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
