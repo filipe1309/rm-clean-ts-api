@@ -39,17 +39,25 @@ npm install --save-dev \
 
 git commit --amend --no-edit
 
+# Husky
 npm i -D husky
-# Enable Git hooks
+# 2. Enable Git hooks
 npx husky install
-# To automatically have Git hooks enabled after install
+# 3. To automatically have Git hooks enabled after install
 npm set-script prepare "husky install"
+# husky hook
+npx husky add .husky/pre-commit "npx lint-staged"
+git add .husky/pre-commit
 
 
 npx husky add .husky/pre-commit "lint-staged"
 
 # To only lint file in git staging area
 npm i -D lint-staged
+
+npm i -D jest @types/jest ts-jest
+
+./node_modules/.bin/jest --init
 ```
 
 https://www.conventionalcommits.org/en/v1.0.0/
@@ -63,3 +71,23 @@ https://github.com/standard/eslint-config-standard-with-typescript
 https://www.npmjs.com/package/husky
 
 https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+
+```
+Would you like to use Jest when running "test" script in "package.json"?
+Y
+
+Would you like to use Typescript for the configuration file?
+N
+
+Choose the test environment that will be used for testing
+Node
+
+Do you want Jest to add coverage reports?
+y
+
+Which provider should be used to instrument code for coverage?
+v8
+
+Automatically clear mock calls, instances and results before every test?
+n
+```
