@@ -23,6 +23,10 @@ git config --globalcore.editor code
 ```sh
 git init
 npm init -y
+
+npm i -D git-commit-msg-linter
+
+npm i -D typescript @types/node
 ```
 
 https://www.conventionalcommits.org/en/v1.0.0/
