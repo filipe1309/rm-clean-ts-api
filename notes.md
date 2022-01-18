@@ -26,3 +26,5 @@ npm init -y
 ```
 
 https://www.conventionalcommits.org/en/v1.0.0/
+
+https://www.npmjs.com/package/git-commit-msg-linter
