@@ -40,6 +40,14 @@ npm install --save-dev \
 git commit --amend --no-edit
 
 npm i -D husky
+# Enable Git hooks
+npx husky install
+# To automatically have Git hooks enabled after install
+npm set-script prepare "husky install"
+
+
+npx husky add .husky/pre-commit "lint-staged"
+
 # To only lint file in git staging area
 npm i -D lint-staged
 ```
