@@ -27,8 +27,21 @@ npm init -y
 npm i -D git-commit-msg-linter
 
 npm i -D typescript @types/node
+
+npm install --save-dev \
+  typescript@\* \
+  eslint@^7.12.1 \
+  eslint-plugin-promise@^5.0.0 \
+  eslint-plugin-import@^2.22.1 \
+  eslint-plugin-node@^11.1.0 \
+  @typescript-eslint/eslint-plugin@^4.0.1 \
+  eslint-config-standard-with-typescript@latest
 ```
 
 https://www.conventionalcommits.org/en/v1.0.0/
 
 https://www.npmjs.com/package/git-commit-msg-linter
+
+https://standardjs.com/
+
+https://github.com/standard/eslint-config-standard-with-typescript
