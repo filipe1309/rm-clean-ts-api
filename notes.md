@@ -91,3 +91,9 @@ v8
 Automatically clear mock calls, instances and results before every test?
 n
 ```
+
+```sh
+npm test
+```
+## CLASS-5
+
