@@ -2,6 +2,10 @@
 
 > notes taken during the course
 
+https://github.com/rmanguinho/clean-ts-api
+
+http://fordevs.herokuapp.com/api-docs/
+
 ## CLASS-3
 
 ```sh
@@ -96,4 +100,6 @@ n
 npm test
 ```
 ## CLASS-5
+
+## CLASS-6
 
