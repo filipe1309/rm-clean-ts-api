@@ -103,3 +103,5 @@ npm test
 
 ## CLASS-6
 
+## CLASS-7
+
