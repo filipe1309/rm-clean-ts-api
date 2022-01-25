@@ -8,6 +8,10 @@ exec 0< /dev/tty
 source .shub/colors.sh   
 source .shub/helpers.sh
 
+
+# Remove Run info from README.md
+sed -i.bak '/SHUBCONFIG/d' ./README.md
+
 echo "---------------------------------------------"
 
 read -r -p "Configure template [$(echo -e $GREEN"Y"$NC)/n]? " response
@@ -23,11 +27,18 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
 
     VERSION=$(head -n 1 .shub/version)
 
+    is_in_git_repo() {
+        if [ -d .git ]; then
+            return 0
+        else
+            return 1
+        fi
+    }
+
     read_values() {
-        if git rev-parse --git-dir > /dev/null 2>&1; then
+        if is_in_git_repo; then
             PROJECT_REPO_LINK=$(git config --get remote.origin.url)
             PROJECT_REPO_NAME=$(basename `git rev-parse --show-toplevel`)
-            GIT_BRANCH=$(git branch --show-current)
             GIT_USERNAME=$(git config user.name)
 
             function extractUserFromGitHubLInk () {
@@ -52,7 +63,6 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
         else
             PROJECT_REPO_LINK="{{ REPLACE_WITH_YOUR_REPO_LINK }}"
             PROJECT_REPO_NAME="{{ REPLACE_WITH_YOUR_REPO_NAME }}"
-            GIT_BRANCH=""
             GIT_USERNAME="{{ REPLACE_WITH_YOUR_NAME }}"
         fi
 
@@ -147,15 +157,22 @@ JSON_TEMPLATE='{
     response=$(echo "$response" | tr '[:upper:]' '[:lower:]') # tolower
     if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
         # Update template
-        sed -i '' -e "s/{{ PROJECT_NAME }}/$PROJECT_NAME/g" README.md
-        sed -i '' -e "s/{{ COURSE_SOURCE }}/$COURSE_SOURCE/g" README.md
-        sed -i '' -e "s/{{ COURSE_NAME }}/$COURSE_NAME/g" README.md
-        sed -i '' -e "s,{{ COURSE_LINK }},$COURSE_LINK,g" README.md
-        sed -i '' -e "s,{{ COURSE_TYPE }},$COURSE_TYPE,g" README.md
-        sed -i '' -e "s/{{ PROJECT_REPO_NAME }}/$PROJECT_REPO_NAME/g" README.md
-        sed -i '' -e "s/{{ GITHUB_USER }}/$GITHUB_USER/g" README.md
-        sed -i '' -e "s/{{ GIT_USERNAME }}/$GIT_USERNAME/g" README.md
-        sed -i '' -e "s/{{ VERSION }}/$VERSION/g" README.md
+        
+        # To support sed from both MacOS and Linux distros
+        SEDOPTION=
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+            SEDOPTION="''"
+        fi
+
+        sed -i $SEDOPTION -e "s/{{ PROJECT_NAME }}/$PROJECT_NAME/g" README.md
+        sed -i $SEDOPTION -e "s/{{ COURSE_SOURCE }}/$COURSE_SOURCE/g" README.md
+        sed -i $SEDOPTION -e "s/{{ COURSE_NAME }}/$COURSE_NAME/g" README.md
+        sed -i $SEDOPTION -e "s,{{ COURSE_LINK }},$COURSE_LINK,g" README.md
+        sed -i $SEDOPTION -e "s,{{ COURSE_TYPE }},$COURSE_TYPE,g" README.md
+        sed -i $SEDOPTION -e "s/{{ PROJECT_REPO_NAME }}/$PROJECT_REPO_NAME/g" README.md
+        sed -i $SEDOPTION -e "s/{{ GITHUB_USER }}/$GITHUB_USER/g" README.md
+        sed -i $SEDOPTION -e "s/{{ GIT_USERNAME }}/$GIT_USERNAME/g" README.md
+        sed -i $SEDOPTION -e "s/{{ VERSION }}/$VERSION/g" README.md
 
 # Create version file
 curl -o .shub/latest-release.json --create-dirs https://api.github.com/repos/filipe1309/shubcogen-template/releases/latest -H 'Cache-Control: no-cache' 2>/dev/null
@@ -174,10 +191,17 @@ EOF
     response=$(echo "$response" | tr '[:upper:]' '[:lower:]') # tolower
     if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
         echo -e "${GREEN}OK =)${NC}"
+    else
+        # Remove shub scripts
+        rm -rf .shub
+        rm deploy.sh
+    fi
 
-        # Auto init first new branch based on course type
-        if git rev-parse --git-dir > /dev/null 2>&1; then
-            [[ $COURSE_MULTIPLE = 'true' ]] && FIRST_BRANCH_NAME="${COURSE_TYPE}-1.1" || FIRST_BRANCH_NAME="${COURSE_TYPE}-1"
+    # Auto init first new branch based on course type
+    if is_in_git_repo; then
+        GIT_BRANCH=$(git branch --show-current)
+        [[ $COURSE_MULTIPLE = 'true' ]] && FIRST_BRANCH_NAME="${COURSE_TYPE}-1.1" || FIRST_BRANCH_NAME="${COURSE_TYPE}-1"
+        if [ $GIT_BRANCH != $FIRST_BRANCH_NAME ]; then
             read -r -p "Checkout to new branch ($(echo -e $GREEN"$FIRST_BRANCH_NAME"$NC)) [$(echo -e $GREEN"Y"$NC)/n]? " response
             response=$(echo "$response" | tr '[:upper:]' '[:lower:]') # tolower
             if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
@@ -187,10 +211,6 @@ EOF
                 echo "" >> notes.md
             fi
         fi
-    else
-        # Remove shub scripts
-        rm -rf .shub
-        rm deploy.sh
     fi
 
     echo "---------------------------------------------"
@@ -200,7 +220,9 @@ EOF
     echo "---------------------------------------------"
 
     # Always remove init script
-    rm init.sh
+    if [ -f init.sh ]; then
+        rm init.sh
+    fi
 else
     exit 0;
 fi
