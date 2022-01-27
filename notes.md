@@ -111,3 +111,8 @@ npm test
 
 ## CLASS-10
 
+## CLASS-11
+
+```sh
+npx husky add .husky/pre-push "npm run test:ci"
+```

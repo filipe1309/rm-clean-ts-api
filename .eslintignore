@@ -1,3 +1,4 @@
 .shub
 node_modules
 dist
+coverage
