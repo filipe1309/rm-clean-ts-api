@@ -116,3 +116,9 @@ npm test
 ```sh
 npx husky add .husky/pre-push "npm run test:ci"
 ```
+## CLASS-12
+
+```sh
+npm i validator
+npm i -D @types/validator
+```
