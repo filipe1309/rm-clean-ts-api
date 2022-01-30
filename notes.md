@@ -124,3 +124,5 @@ npm i -D @types/validator
 ```
 ## CLASS-13
 
+## CLASS-14
+
