@@ -6,6 +6,8 @@ https://github.com/rmanguinho/clean-ts-api
 
 http://fordevs.herokuapp.com/api-docs/
 
+# Section 1: Introdução
+
 ## CLASS-3
 
 ```sh
@@ -101,6 +103,8 @@ npm test
 ```
 ## CLASS-5
 
+# Section 2: SignUp API - Presentation Layer
+
 ## CLASS-6
 
 ## CLASS-7
@@ -111,18 +115,25 @@ npm test
 
 ## CLASS-10
 
+# Section 3: Jest
 ## CLASS-11
 
 ```sh
 npx husky add .husky/pre-push "npm run test:ci"
 ```
+
+# Section 4: Utils Layer
 ## CLASS-12
 
 ```sh
 npm i validator
 npm i -D @types/validator
 ```
+
+# Section 5: SignUp API - Data Layer
 ## CLASS-13
 
 ## CLASS-14
+
+# Section 6: SignUp API - Infra Layer
 
