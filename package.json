@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/filipe1309/rm-clean-ts-api#readme",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.9",
     "@types/validator": "^13.7.1",
@@ -41,6 +42,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }

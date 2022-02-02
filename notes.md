@@ -137,3 +137,9 @@ npm i -D @types/validator
 
 # Section 6: SignUp API - Infra Layer
 
+## CLASS-15
+
+```sh
+npm i bcrypt 
+npm i -D @types/bcrypt
+```
