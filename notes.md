@@ -143,3 +143,13 @@ npm i -D @types/validator
 npm i bcrypt 
 npm i -D @types/bcrypt
 ```
+## CLASS-16
+
+https://github.com/shelfio/jest-mongodb
+
+```sh
+npm i -D @shelf/jest-mongodb @types/mongodb
+npm i mongodb
+```
+
+Verify binary version in jest-mongodb-config.js in a real app 
