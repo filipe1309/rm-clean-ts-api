@@ -166,4 +166,6 @@ npm i -D @types/express
 npm i -D sucrase
 
 npm start
+
+npm i -D supertest @types/supertest
 ```
