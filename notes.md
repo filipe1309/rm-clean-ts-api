@@ -155,3 +155,15 @@ npm i mongodb
 Verify binary version in jest-mongodb-config.js in a real app 
 ## CLASS-17
 
+# Section 7: SignUp API - Main Layer
+
+## CLASS-18
+
+```sh
+npm i express
+npm i -D @types/express
+
+npm i -D sucrase
+
+npm start
+```
