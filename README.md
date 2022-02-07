@@ -50,8 +50,14 @@ cd rm-clean-ts-api
 
 ## :runner: Running
 
+Up the database:
 ```sh
-npm run dev
+docker-compose run --rm --service-ports db
+```
+
+Up the api:
+```sh
+npm run start
 ```
 <!-- # docker-compose up -->
 
@@ -61,14 +67,31 @@ npm run dev
 
 [Access here.](./api.http)
 
-<!-- ## :white_check_mark: Tests
-
-After up the container:
+## :white_check_mark: Tests
 
 ```sh
-docker-compose exec -t {{ CONTAINER_SERVICE_NAME }} ./vendor/bin/phpunit
+npm run test
+```
+```sh
+npn run test:verbose
+```
+```sh
+npn run test:unit
+```
+```sh
+npn run test:integration
+```
+```sh
+npn run test:staged
+```
+```sh
+npn run test:ci
+```
+```sh
+npn run test:clear
 ```
 
+<!-- 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
