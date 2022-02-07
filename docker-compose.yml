@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:4.0.24
+    environment:
+      - MONGO_INITDB_DATABASE=totalzero
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=123mudar
+      - MONGO_APPLICATION_DATABASE=totalzero
+      - MONGO_APPLICATION_USERNAME=dotr
+      - MONGO_APPLICATION_PASSWORD=123mudar
+    ports:
+      - 27017:27017
+    # volumes:
+    #   - ./.docker/mongo/db:/data/db
+    #   - ./.docker/mongo/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
