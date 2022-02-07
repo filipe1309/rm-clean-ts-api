@@ -1,7 +1,7 @@
 # <p align="center">Clean TS API</p>
 
 <p align="center">
-    <!-- <img src="https://img.shields.io/badge/Tools-Docker-informational?style=flat-square&logo=docker&color=2496ED" alt="Docker" /> -->
+    <img src="https://img.shields.io/badge/Tools-Docker-informational?style=flat-square&logo=docker&color=2496ED" alt="Docker" />
     <img src="https://img.shields.io/badge/Code-NodeJS-informational?style=flat-square&logo=node.js&color=339933" alt="NodeJS" />
     <img src="https://img.shields.io/badge/Code-Typescript-informational?style=flat-square&logo=typescript&color=3178C6" alt="Typescript" />
     <img src="https://img.shields.io/badge/Code-JavaScript-informational?style=flat-square&logo=javascript&color=F7DF1E" alt="JavaScript" />
@@ -27,16 +27,16 @@ This project was developed following Udemy's "[NodeJs, Typescript, TDD, DDD, Cle
 - [MongoDB](https://www.mongodb.com/)
 - [Heroku](https://www.heroku.com/)
 - [Jest](https://jestjs.io/)
-<!-- - [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/) -->
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## :scroll: Requirements
 
 - [Node.js](https://nodejs.org/en/)
 - [Npm](https://www.npmjs.com/)
 - [MongoDb](https://www.mongodb.com/)
-<!-- - [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/) -->
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## :cd: Installation
 
