@@ -171,3 +171,7 @@ npm i -D supertest @types/supertest
 ```
 ## CLASS-19
 
+```sh
+# Looks like the Filesystem lib
+ npm i fast-glob
+```
