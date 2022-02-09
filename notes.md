@@ -177,3 +177,7 @@ npm i -D supertest @types/supertest
 ```
 ## CLASS-20
 
+# Section 8: Log de Erro
+
+## CLASS-21
+
