@@ -10,7 +10,7 @@ import { LogControllerDecorator } from '../decorators/log'
 // TODO remove
 const makeLogErrorRepository = (): LogErrorRepository => {
   class LogErrorRepositoryStub implements LogErrorRepository {
-    async log (stack: string): Promise<void> {
+    async logError (stack: string): Promise<void> {
       return await new Promise((resolve) => resolve())
     }
   }

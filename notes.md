@@ -187,3 +187,5 @@ npm i -D supertest @types/supertest
 
 ## CLASS-24
 
+## CLASS-25
+
