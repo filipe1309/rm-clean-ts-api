@@ -211,3 +211,14 @@ npm i -D supertest @types/supertest
 
 ## CLASS-34
 
+# Section 11: Segurança - Hash/Encrypt/Encode
+
+## CLASS-35
+
+### Security 
+Hash - not reversible
+Encrypt - reversible
+
+### Transport
+Encoding - Used for transport information
+# Section 12: Login API - Infra Layer
