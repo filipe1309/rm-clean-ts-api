@@ -222,3 +222,5 @@ Encrypt - reversible
 ### Transport
 Encoding - Used for transport information
 # Section 12: Login API - Infra Layer
+## CLASS-36
+
