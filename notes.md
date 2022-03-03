@@ -226,3 +226,6 @@ Encoding - Used for transport information
 
 ## CLASS-37
 
+```
+npm i jsonwebtoken
+```
