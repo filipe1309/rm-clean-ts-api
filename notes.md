@@ -236,3 +236,5 @@ npm i @types/jsonwebtoken -D
 
 ## CLASS-39
 
+## CLASS-40
+
