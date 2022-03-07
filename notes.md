@@ -238,3 +238,16 @@ npm i @types/jsonwebtoken -D
 
 ## CLASS-40
 
+```sh
+ git tag -a "1.1.0" -m"1.1.0"
+```
+
+```sh
+git config --global --edit
+// .gitconfig
+// Subir automaticamente tags annotated no push
+[push]
+  followTags = true
+```
+
+# Section 14: Docker
