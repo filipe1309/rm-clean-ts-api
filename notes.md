@@ -244,10 +244,26 @@ npm i @types/jsonwebtoken -D
 
 ```sh
 git config --global --edit
-// .gitconfig
-// Subir automaticamente tags annotated no push
+```
+```sh
+# .gitconfig
+# Subir automaticamente tags annotated no push
 [push]
   followTags = true
 ```
 
 # Section 14: Docker
+## CLASS-41
+
+```sh
+npm run build 
+```
+
+```sh
+# Clean dist folder
+npm i -D rimraf
+```
+
+```sh
+npm remove fast-glob  
+```
