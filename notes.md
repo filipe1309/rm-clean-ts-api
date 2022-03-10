@@ -267,3 +267,23 @@ npm i -D rimraf
 ```sh
 npm remove fast-glob  
 ```
+
+### Heroku
+
+```sh
+heroku git:remote -a rm-clean-ts-api
+git remote rename heroku p
+git push p master
+```
+
+#### Secrets
+
+Settings > Config Vars, add:
+ - `JWT_SECRET` = pH5hm==53
+ - `MONGO_URL` = mongodb://...
+
+##### DB
+
+Resources > Free Dynos > mLab MongoDB [DEPRECATED]
+ 
+Use Atlas https://www.mongodb.com/developer/how-to/use-atlas-on-heroku/
