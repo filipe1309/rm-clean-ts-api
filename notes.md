@@ -289,3 +289,28 @@ Resources > Free Dynos > mLab MongoDB [DEPRECATED]
 Use Atlas https://www.mongodb.com/developer/how-to/use-atlas-on-heroku/
 ## CLASS-42
 
+```sh
+# list all containers
+docker ps -a
+
+# remove one container
+docker container rm 01f
+
+# remove all containers
+docker container prune
+
+# remove one image
+docker image rm a56
+
+# list all images
+docker image -a
+
+# creane a new image
+docker build -t clean-node-api .
+
+# run container & execute shell
+docker run -it clean-node-api sh
+
+# run container
+docker run -p 5050:5050 clean-node-api
+```
