@@ -4,3 +4,5 @@ coverage
 globalConfig.json
 
 .DS_Store
+
+data
