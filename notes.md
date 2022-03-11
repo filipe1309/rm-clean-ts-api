@@ -287,3 +287,5 @@ Settings > Config Vars, add:
 Resources > Free Dynos > mLab MongoDB [DEPRECATED]
  
 Use Atlas https://www.mongodb.com/developer/how-to/use-atlas-on-heroku/
+## CLASS-42
+
