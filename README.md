@@ -54,16 +54,11 @@ cd rm-clean-ts-api
 
 ## :runner: Running
 
-Up the database:
-```sh
-docker-compose run --rm --service-ports db
+Up the container with tha API & DB:
+```sh 
+npm run up
 ```
-
-Up the api:
-```sh
-npm run start
-```
-<!-- # docker-compose up -->
+> Stop with `npm run down`
 
 > Access http://localhost:5050/api
 
