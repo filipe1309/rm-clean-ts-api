@@ -330,3 +330,12 @@ npm i nodemon
 tsc -w
 npx tsc -w
 ```
+## CLASS-46
+
+```sh
+npm update
+npm test
+npm audit fix
+npm audit fix --force
+npm test
+```
