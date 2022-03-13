@@ -2,7 +2,7 @@
 import env from '../../config/env'
 import { LogControllerDecorator } from '../../decorators/log-controller-decorator'
 import { Controller } from '../../../presentation/protocols'
-import { LoginController } from '../../../presentation/controllers/Login/Login-controller'
+import { LoginController } from '../../../presentation/controllers/login/login-controller'
 import { LogMongoRepository } from '../../../infra/db/mongodb/log/log-mongo-repository'
 import { DbAuthentication } from '../../../data/usecases/authentication/db-authentication'
 import { makeLoginValidation } from './login-validation-factory'
