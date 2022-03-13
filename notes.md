@@ -322,3 +322,11 @@ docker-compose up
 ```
 ## CLASS-44
 
+## CLASS-45
+
+```sh
+npm i nodemon
+
+tsc -w
+npx tsc -w
+```
