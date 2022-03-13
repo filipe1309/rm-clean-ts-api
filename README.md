@@ -21,6 +21,139 @@ This project was developed following Udemy's "[NodeJs, Typescript, TDD, DDD, Cle
 
 ![](arch_login.png)
 
+> ## APIs construídas no treinamento
+
+1. [Cadastro](./requirements/signup.md)
+2. [Login](./requirements/login.md)
+3. [Criar enquete](./requirements/add-survey.md)
+4. [Listar enquetes](./requirements/load-surveys.md)
+5. [Responder enquete](./requirements/save-survey-result.md)
+6. [Resultado da enquete](./requirements/load-survey-result.md)
+
+> ## Priciples
+
+* Single Responsibility Principle (SRP)
+* Open Closed Principle (OCP)
+* Liskov Substitution Principle (LSP)
+* Interface Segregation Principle (ISP)
+* Dependency Inversion Principle (DIP)
+* Separation of Concerns (SOC)
+* Don't Repeat Yourself (DRY)
+* You Aren't Gonna Need It (YAGNI)
+* Keep It Simple, Silly (KISS)
+* Composition Over Inheritance
+* Small Commits
+
+> ## Design Patterns
+
+* Factory
+* Adapter
+* Composite
+* Decorator
+* Proxy
+* Dependency Injection
+* Abstract Server
+* Composition Root
+* Builder
+* Singleton
+
+> ## Methodologies & Designs
+
+* TDD
+* Clean Architecture
+* DDD
+* Conventional Commits
+* GitFlow
+* Modular Design
+* Dependency Diagrams
+* Use Cases
+* Continuous Integration
+* Continuous Delivery
+* Continuous Deployment
+
+
+> ## Features - Node
+
+* API Docs with Swagger
+* API Rest with Express
+* GraphQL with Apollo Server
+* Log de Erro
+* Security(Hashing, Encryption & Encoding)
+* CORS
+* Middlewares
+* Access leves in routes (Admin, User & Anon)
+* Heroku Deploy
+* Static files
+
+> ## Features - GraphQL
+
+* Types
+* Queries
+* Mutations
+* Resolvers
+* Directives
+* Scalars
+* Plugins
+
+> ## Features - Git
+
+* Alias
+* Custom Log
+* Branch
+* Reset
+* Amend
+* Tag
+* Stash
+* Rebase
+* Merge
+
+> ## Features do Typescript
+
+* Advanced POO
+* Interface
+* TypeAlias
+* Namespace
+* Utility Types
+* Paths Modularization
+* Configs
+* Build
+* Deploy
+* Breakpoints
+
+> ## Features do GraphQL
+
+* Resolvers
+* Type Definitions
+* Directives
+* Scalars
+* Plugins
+* Error Handling
+
+> ## Features - Tests
+
+* Unit tests
+* Integration tests (API Rest & GraphQL)
+* Coverage
+* Test Doubles
+* Mocks
+* Stubs
+* Spies
+* Fakes
+
+> ## Features - MongoDb
+
+* Connect e Reconnect
+* Collections
+* InsertOne e InserMany
+* Find, FindOne e FindOneAndUpdate
+* DeleteMany
+* UpdateOne
+* Aggregation (Match, Group, Unwind, Lookup, AddFields, Project, Sort)
+* ObjectId
+* Upsert e ReturnOriginal
+* Push, Divide, Multiply, ArrayElemAt, Cond, Sum
+* Filter, Map, Reduce, MergeObjects, ConcatArrays
+
 ## :computer: Technologies
 
 - [Node.js](https://nodejs.org/en/)
@@ -33,12 +166,38 @@ This project was developed following Udemy's "[NodeJs, Typescript, TDD, DDD, Cle
 - [Jest](https://jestjs.io/)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
+- [NPM](NPM)
+- [Git](Git)
+- [Travis CI](Travis_CI)
+- [Swagger](Swagger)
+- [Bcrypt](Bcrypt)
+- [JsonWebToken](JsonWebToken)
+- [Faker](Faker)
+- [Coveralls](Coveralls)
+- [Validator](Validator)
+- [Express](Express)
+- [Apollo Server Express](Apollo_Server_Express)
+- [Graphql](Graphql)
+- [Graphql ISO Date](Graphql_ISO_Date)
+- [Graphql Scalars](Graphql_Scalars)
+- [Graphql Tools](Graphql_Tools)
+- [Supertest](Supertest)
+- [Lint Staged](Lint_Staged)
+- [Eslint](Eslint)
+- [Standard Javascript Style](Standard_Javascript_Style)
+- [Sucrase](Sucrase)
+- [Nodemon](Nodemon)
+- [Rimraf](Rimraf)
+- [In-Memory MongoDb Server](In-Memory_MongoDb_Server)
+- [MockDate](MockDate)
+- [Module-Alias](Module-Alias)
+- [Copyfiles](Copyfiles)
+- [Npm Check](Npm_Check)
+- [Bson ObjectId](Bson_ObjectId)
+- [Apollo Server Integration Testing](Apollo_Server_Integration_Testing)
 
 ## :scroll: Requirements
 
-- [Node.js](https://nodejs.org/en/)
-- [Npm](https://www.npmjs.com/)
-- [MongoDb](https://www.mongodb.com/)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
