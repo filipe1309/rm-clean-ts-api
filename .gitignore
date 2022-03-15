@@ -6,3 +6,4 @@ globalConfig.json
 .DS_Store
 
 data
+!src/data
