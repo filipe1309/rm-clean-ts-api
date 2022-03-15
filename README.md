@@ -21,16 +21,16 @@ This project was developed following Udemy's "[NodeJs, Typescript, TDD, DDD, Cle
 
 ![](arch_login.png)
 
-> ## APIs construídas no treinamento
+> ## APIs built during training
 
-1. [Cadastro](./requirements/signup.md)
+1. [SignUp](./requirements/signup.md)
 2. [Login](./requirements/login.md)
-3. [Criar enquete](./requirements/add-survey.md)
-4. [Listar enquetes](./requirements/load-surveys.md)
-5. [Responder enquete](./requirements/save-survey-result.md)
-6. [Resultado da enquete](./requirements/load-survey-result.md)
+3. [Add survey](./requirements/add-survey.md)
+4. [List surveys](./requirements/load-surveys.md)
+5. [Answer survey](./requirements/save-survey-result.md)
+6. [Survey result](./requirements/load-survey-result.md)
 
-> ## Priciples
+> ## Principles
 
 * Single Responsibility Principle (SRP)
 * Open Closed Principle (OCP)
