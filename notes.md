@@ -339,3 +339,8 @@ npm audit fix
 npm audit fix --force
 npm test
 ```
+
+# Section 15: SignUp API - Fixes
+
+## CLASS-47
+
