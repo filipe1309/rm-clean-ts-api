@@ -2,7 +2,7 @@ import { MongoHelper as sut } from './mongo-helper'
 
 describe('Mongo Helper', () => {
   beforeAll(async () => {
-    return await sut.connect(process.env.MONGO_URL as string)
+    return await sut.connect(process.env.MONGO_URL)
   })
 
   afterAll(async () => {
