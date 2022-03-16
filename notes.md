@@ -351,3 +351,5 @@ src/main/factories/usecases/add-account/db-add-account-factory.ts
 https://github.com/rmanguinho/clean-ts-api/commit/547a1bde6bf9ffe079d913dab1d5e1a53d679ea7
 ## CLASS-49
 
+## CLASS-50
+
