@@ -215,7 +215,7 @@ if test $STATE -lt $STATE_STEP_DEPLOY_BRANCH_ID; then
         echo ""
     fi
     echo "🚀 Deploying on \"$(echo -e $GREEN"$GIT_DEFAULT_BRANCH"$NC)\" branch"
-    { git push origin $GIT_DEFAULT_BRANCH  || { echo -e "$FAILED_MSG" ; exit 1; } }
+    { git push origin $GIT_DEFAULT_BRANCH --follow-tags || { echo -e "$FAILED_MSG" ; exit 1; } }
     commit_state "$STATE_STEP_DEPLOY_BRANCH_ID"
     clear
 fi
@@ -230,7 +230,7 @@ if test $STATE -lt $STATE_STEP_DEPLOY_TAG_ID; then
         confirm "Deploy tag \"$(echo -e $GREEN"$TAG_NAME"$NC)\" [$(echo -e $GREEN"Y"$NC)/n]? "
         clear
     fi
-    { git push origin $GIT_DEFAULT_BRANCH --tags  || { echo -e "$FAILED_MSG" ; exit 1; } }
+    # { git push origin $GIT_DEFAULT_BRANCH --tags  || { echo -e "$FAILED_MSG" ; exit 1; } }
     commit_state "$STATE_STEP_DEPLOY_TAG_ID"
     clear
     echo ""
