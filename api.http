@@ -17,3 +17,19 @@ Content-Type: application/json
   "email": "john.doe@mail.com",
   "password": "123456"
 }
+
+###
+
+
+POST http://localhost:5050/api/surveys
+Content-Type: application/json
+
+{
+  "question": "Question 1",
+  "answers": [
+    {
+      "answer": "Answer 1",
+      "image": "image-name.jpg"
+    }
+  ]
+}
