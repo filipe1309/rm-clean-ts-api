@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# DevOntheRun Envs Script
+# Devdotrun Envs Script
 
 VERSION=$(head -n 1 .shub/version)
 
@@ -42,3 +42,8 @@ STATE_STEP_MERGE_ID="3"
 STATE_STEP_TAG_ID="4"
 STATE_STEP_DEPLOY_BRANCH_ID="5"
 STATE_STEP_NEXT_ID="6"
+
+
+SHUB_ENVS="$(cat .shub/shub-envs.sh)"
+STATE_STEPS=$(grep -o -i "STATE_STEP_" .shub/shub-envs.sh | wc -l)
+STATE_STEPS=$(($STATE_STEPS - 1))

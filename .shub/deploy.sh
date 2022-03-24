@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# DevOntheRun Deploy Script
+# Devdotrun Deploy Script
 
 .shub/shub-logo.sh
 source .shub/colors.sh
@@ -145,14 +145,21 @@ generateTag() {
 #### BRANCH #####
 #################
 
+echo "🟢 Starting deploy process ..."
+
 # STEP 1 - SHUB FILES
 
 if test $STATE -lt $STATE_STEP_SHUB_FILES_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_SHUB_FILES_ID/7 - SHUB FILES$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_SHUB_FILES_ID/$STATE_STEPS - SHUB FILES$NC"
     echo ""
-    echo "🏁 Starting deploy process ..."
     echo "✔ Auto commiting notes ..."
+    
+    # Update notes file
+    echo ""
+    echo "## $GIT_BRANCH_NEXT_CLASS_UP" >> notes.md
+    echo "" >> notes.md
+
     git add notes.md && git commit -m "docs: update notes"
     if ( ! test -f ".gitignore" ) || ( test -f ".gitignore" && ! grep -q .shub ".gitignore" ); then
         echo "✔ Auto commiting shub files ..."
@@ -167,7 +174,7 @@ fi
 
 if test $STATE -lt $STATE_STEP_CHECKOUT_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_CHECKOUT_ID/7 - CHECKOUT$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_CHECKOUT_ID/$STATE_STEPS - CHECKOUT$NC"
     echo ""
     if [ -z "$ALL" ]; then
         confirm "Checkout to \"$(echo -e $GREEN"$GIT_DEFAULT_BRANCH"$NC)\" branch [$(echo -e $GREEN"Y"$NC)/n]? "
@@ -182,7 +189,7 @@ fi
 
 if test $STATE -lt $STATE_STEP_MERGE_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_MERGE_ID/7 - MERGE$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_MERGE_ID/$STATE_STEPS - MERGE$NC"
     echo ""
     if [ -z "$ALL" ]; then
         confirm "Merge current branch ($GIT_BRANCH) [$(echo -e $GREEN"Y"$NC)/n]? "
@@ -197,7 +204,7 @@ fi
 
 if test $STATE -lt $STATE_STEP_TAG_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_TAG_ID/7 - TAG$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_TAG_ID/$STATE_STEPS - TAG$NC"
     echo ""
     generateTag
     commit_state "$STATE_STEP_TAG_ID"
@@ -208,7 +215,7 @@ fi
 
 if test $STATE -lt $STATE_STEP_DEPLOY_BRANCH_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_DEPLOY_BRANCH_ID/7 - DEPLOY BRANCH$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_DEPLOY_BRANCH_ID/$STATE_STEPS - DEPLOY BRANCH$NC"
     echo ""
     if [ -z "$ALL" ]; then
         confirm "Deploy on \"$(echo -e $GREEN"$GIT_DEFAULT_BRANCH"$NC)\" branch [$(echo -e $GREEN"Y"$NC)/n]? "
@@ -230,7 +237,7 @@ fi
 
 if test $STATE -lt $STATE_STEP_NEXT_ID; then
     echo ""
-    echo -e "$GREEN# STEP $STATE_STEP_NEXT_ID/7 - NEXT$NC"
+    echo -e "$GREEN# STEP $STATE_STEP_NEXT_ID/$STATE_STEPS - NEXT$NC"
     echo ""
     if [ -z "$ALL" ]; then
         confirm "Go to next \"$(echo -e $GREEN"$COURSE_TYPE"$NC)\" ($GIT_BRANCH_NEXT_CLASS_LW) [$(echo -e $GREEN"Y"$NC)/n]? " 
@@ -244,13 +251,9 @@ if [ -f ".shub-state.ini" ]; then
     flush_state
 fi
 
-# Update notes file
-echo ""
-echo "## $GIT_BRANCH_NEXT_CLASS_UP" >> notes.md
-echo "" >> notes.md
-
-echo -e "$GREEN"
-echo -e "Deploy script finished!"
+echo -e "$BLACK $ON_GREEN"
+echo -e "🏁 Deploy script finished!"
+echo -e "$NC"
+echo -e "$DARK_GRAY"
 echo -e "Thank you =)"
 echo -e "$NC"
-
