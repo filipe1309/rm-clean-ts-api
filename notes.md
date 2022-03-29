@@ -379,3 +379,5 @@ https://github.com/rmanguinho/clean-ts-api/commit/547a1bde6bf9ffe079d913dab1d5e1
 
 ## CLASS-60
 
+## CLASS-61
+
