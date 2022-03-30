@@ -36,3 +36,5 @@ jobs:
           command: jest --collectCoverage=true
       - store_artifacts:
           path: coverage
+      - codecov/upload:
+          file: {{ coverage_report_filepath }}
