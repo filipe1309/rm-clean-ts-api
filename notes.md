@@ -389,3 +389,5 @@ git tag -a "1.3.0" -m"1.3.0"
 ```sh
 npm i coveralls -D
 ```
+## CLASS-62
+
