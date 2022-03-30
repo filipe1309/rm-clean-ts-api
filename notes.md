@@ -353,7 +353,7 @@ https://github.com/rmanguinho/clean-ts-api/commit/547a1bde6bf9ffe079d913dab1d5e1
 
 ## CLASS-50
 ```sh
- git tag -a "1.2.3" -m"1.2.3"
+git tag -a "1.2.3" -m"1.2.3"
 ```
 
 # Section 16: AddSurvey API
@@ -378,6 +378,14 @@ https://github.com/rmanguinho/clean-ts-api/commit/547a1bde6bf9ffe079d913dab1d5e1
 ## CLASS-59
 
 ## CLASS-60
+```sh
+git tag -a "1.3.0" -m"1.3.0"
+```
+
+# Section 18: CI/CD
 
 ## CLASS-61
 
+```sh
+npm i coveralls -D
+```

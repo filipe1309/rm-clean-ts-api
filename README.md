@@ -1,5 +1,7 @@
 # <p align="center">Survey - Clean TS API</p>
 
+[![CircleCI](https://circleci.com/gh/filipe1309/rm-clean-ts-api/tree/main.svg?style=svg)](https://circleci.com/gh/filipe1309/rm-clean-ts-api/tree/main)
+
 <p align="center">
     <img src="https://img.shields.io/badge/Tools-Docker-informational?style=flat-square&logo=docker&color=2496ED" alt="Docker" />
     <img src="https://img.shields.io/badge/Code-NodeJS-informational?style=flat-square&logo=node.js&color=339933" alt="NodeJS" />
