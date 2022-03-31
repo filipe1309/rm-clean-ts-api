@@ -31,15 +31,12 @@ describe('Survey Routes', () => {
         .post('/api/surveys')
         .send({
           question: 'Question',
-          answers: [
-            {
-              answer: 'Answer 1',
-              image: 'http://my-image.com/img.jpg'
-            },
-            {
-              answer: 'Answer 2'
-            }
-          ]
+          answers: [{
+            answer: 'Answer 1',
+            image: 'http://my-image.com/img.jpg'
+          }, {
+            answer: 'Answer 2'
+          }]
         })
         .expect(403)
     })
