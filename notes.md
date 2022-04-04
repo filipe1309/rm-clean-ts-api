@@ -411,3 +411,7 @@ show collections
 db.accounts.find().pretty()
 db.accounts.update({_id: ObjectId("622a9f804c4675be2f859d28")}, {$set: {role: 'admin'}})
 ```
+
+# Section 20: Paths no Typescript
+## CLASS-66
+
