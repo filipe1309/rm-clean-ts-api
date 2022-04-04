@@ -1,3 +1,5 @@
+### signup
+
 POST http://localhost:5050/api/signup
 Content-Type: application/json
 
@@ -8,7 +10,7 @@ Content-Type: application/json
   "passwordConfirmation": "123456"
 }
 
-###
+### login
 
 POST http://localhost:5050/api/login
 Content-Type: application/json
@@ -18,8 +20,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-###
-
+### add surveys
 
 POST http://localhost:5050/api/surveys
 Content-Type: application/json
@@ -34,3 +35,8 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE
     }
   ]
 }
+
+### load surveys
+
+GET http://localhost:5050/api/surveys
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY0OTAzODE3OH0.GCW8kgEC4fgBxIek-OUfo2CYQdHBpEOCDhw2BQFqm-4

@@ -403,3 +403,11 @@ npm i mockdate -D
 
 ## CLASS-65
 
+```sh
+mongo -u root -p 12345
+show dbs
+use clean-node-api
+show collections
+db.accounts.find().pretty()
+db.accounts.update({_id: ObjectId("622a9f804c4675be2f859d28")}, {$set: {role: 'admin'}})
+```
