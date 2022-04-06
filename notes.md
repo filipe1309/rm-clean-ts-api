@@ -418,3 +418,5 @@ db.accounts.update({_id: ObjectId("622a9f804c4675be2f859d28")}, {$set: {role: 'a
 ```sh
 npm i module-alias
 ```
+## CLASS-67
+
