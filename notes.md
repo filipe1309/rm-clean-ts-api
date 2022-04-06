@@ -415,3 +415,6 @@ db.accounts.update({_id: ObjectId("622a9f804c4675be2f859d28")}, {$set: {role: 'a
 # Section 20: Paths no Typescript
 ## CLASS-66
 
+```sh
+npm i module-alias
+```
