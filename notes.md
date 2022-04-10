@@ -427,3 +427,5 @@ npm i module-alias
 ## CLASS-69
 ## CLASS-70
 
+## CLASS-71
+
