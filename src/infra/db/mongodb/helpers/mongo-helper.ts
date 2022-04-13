@@ -21,11 +21,15 @@ export const MongoHelper = {
     return this.client.db().collection(name)
   },
 
-  map: (collection: any, id?: string): any => {
+  map: (data: any, id?: string): any => {
     if (!id) {
-      id = collection._id.toString()
+      id = data._id.toString()
     }
-    delete collection._id
-    return { id, ...collection }
+    delete data._id
+    return { id, ...data }
+  },
+
+  mapCollection: (collection: any[], id?: string): any[] => {
+    return collection.map(c => MongoHelper.map(c))
   }
 }
