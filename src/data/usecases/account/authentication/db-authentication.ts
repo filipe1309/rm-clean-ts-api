@@ -1,6 +1,6 @@
 import {
   Authentication,
-  AuthenticationModel,
+  AuthenticationParams,
   HashComparer,
   Encrypter,
   LoadAccountByEmailRepository,
@@ -16,7 +16,7 @@ export class DbAuthentication implements Authentication {
   ) {
   }
 
-  async auth (authentication: AuthenticationModel): Promise<string|null> {
+  async auth (authentication: AuthenticationParams): Promise<string|null> {
     const account = await this.loadAccountByEmailRepository.loadByEmail(authentication.email)
     if (account) {
       const isValid = await this.hashComparer.compare(authentication.password, account.password)
