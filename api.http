@@ -39,4 +39,15 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE
 ### load surveys
 
 GET http://localhost:5050/api/surveys
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY0OTAzODE3OH0.GCW8kgEC4fgBxIek-OUfo2CYQdHBpEOCDhw2BQFqm-4
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY0OTg5Njk2OH0.k37BQWGglT8KZWtp8fzWdFePwBPnHlRGSeILaSx9fs0
+
+
+### save survey result
+
+PUT http://localhost:5050/api/surveys/623787417bed337c7e649527/results
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY0OTg5Njk2OH0.k37BQWGglT8KZWtp8fzWdFePwBPnHlRGSeILaSx9fs0
+
+{
+  "answer": "Answer 1"
+}
