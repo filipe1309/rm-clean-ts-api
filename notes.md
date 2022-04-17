@@ -453,3 +453,8 @@ npm i module-alias
 
 ## CLASS-82
 
+Find & Replace with regex in VSCode:
+```
+Find: new Promise\(resolve => resolve\((.*)\)\)
+Replace: Promise.resolve($1)
+```
