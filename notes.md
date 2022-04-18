@@ -469,3 +469,12 @@ npm i @types/swagger-ui-express -D
 ```
 
 https://swagger.io/docs/specification/basic-structure/
+
+https://github.com/helmetjs/nocache
+
+```
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+Surrogate-Control: no-store
+```
