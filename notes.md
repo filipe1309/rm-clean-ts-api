@@ -467,3 +467,5 @@ Replace: Promise.resolve($1)
 npm i swagger-ui-express
 npm i @types/swagger-ui-express -D
 ```
+
+https://swagger.io/docs/specification/basic-structure/
