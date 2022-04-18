@@ -458,5 +458,12 @@ Find & Replace with regex in VSCode:
 Find: new Promise\(resolve => resolve\((.*)\)\)
 Replace: Promise.resolve($1)
 ```
+
+# Section 23: Swagger
+
 ## CLASS-83
 
+```sh
+npm i swagger-ui-express
+npm i @types/swagger-ui-express -D
+```
