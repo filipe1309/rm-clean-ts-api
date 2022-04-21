@@ -1,5 +1,5 @@
-import { loginPath, signUpPath, surveyPath } from './paths'
-import { accountSchema, apiKeyAuthSchema, errorSchema, loginParamsSchema, surveySchema, surveyAnswerSchema, surveysSchema, signUpParamsSchema, addSurveyParamsSchema } from './schemas'
+import { loginPath, signUpPath, surveyPath, surveyResultPath } from './paths'
+import { accountSchema, apiKeyAuthSchema, errorSchema, loginParamsSchema, surveySchema, surveyAnswerSchema, surveysSchema, signUpParamsSchema, addSurveyParamsSchema, saveSurveyParamsSchema, surveyResultSchema } from './schemas'
 import { badRequest, forbidden, notFound, serverError, unauthorized } from './components'
 
 export default {
@@ -24,7 +24,8 @@ export default {
   paths: {
     '/login': loginPath,
     '/signup': signUpPath,
-    '/surveys': surveyPath
+    '/surveys': surveyPath,
+    '/surveys/{surveyId}/results': surveyResultPath
   },
   schemas: {
     account: accountSchema,
@@ -34,7 +35,9 @@ export default {
     error: errorSchema,
     survey: surveySchema,
     surveyAnswer: surveyAnswerSchema,
-    surveys: surveysSchema
+    surveys: surveysSchema,
+    saveSurveyParams: saveSurveyParamsSchema,
+    surveyResult: surveyResultSchema
   },
   components: {
     securitySchemes: {
