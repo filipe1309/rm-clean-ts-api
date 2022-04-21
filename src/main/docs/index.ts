@@ -1,6 +1,6 @@
-import { loginPath } from './paths/login-path'
-import { accountSchema } from './schemas/account-schema'
-import { loginParamsSchema } from './schemas/login-params-schema'
+import { loginPath } from './paths'
+import { accountSchema, errorSchema, loginParamsSchema } from './schemas'
+import { badRequest, notFound, serverError, unauthorized } from './components'
 
 export default {
   openapi: '3.0.0',
@@ -8,6 +8,10 @@ export default {
     title: 'Survey - Clean Node API',
     description: 'Survey API with Clean Architecture',
     version: '1.0.0'
+  },
+  license: {
+    name: 'GNU General Public License v3.0',
+    url: 'https://choosealicense.com/licenses/gpl-3.0/'
   },
   servers: [{
     url: '/api'
@@ -20,6 +24,13 @@ export default {
   },
   schemas: {
     account: accountSchema,
-    loginParams: loginParamsSchema
+    loginParams: loginParamsSchema,
+    error: errorSchema
+  },
+  components: {
+    badRequest,
+    serverError,
+    notFound,
+    unauthorized
   }
 }
