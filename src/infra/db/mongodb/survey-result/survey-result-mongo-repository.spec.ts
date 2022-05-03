@@ -14,6 +14,8 @@ const makeSurvey = async (): Promise<string> => {
       answer: 'any_answer'
     }, {
       answer: 'any_other_answer'
+    }, {
+      answer: 'any_other_answer_again'
     }],
     date: new Date()
   })
@@ -98,6 +100,45 @@ describe('Survey Result Mongo Repository', () => {
       expect(surveyResult.answers[0].percent).toBe(100)
       expect(surveyResult.answers[1].count).toBe(0)
       expect(surveyResult.answers[1].percent).toBe(0)
+    })
+  })
+
+  describe('loadBySurveyResultId()', () => {
+    test('Should load a survey result', async () => {
+      const surveyId = await makeSurvey()
+      const accountId = await makeAccount()
+      await surveyResultCollection.insertMany([{
+        surveyId: new ObjectId(surveyId),
+        accountId: new ObjectId(accountId),
+        answer: 'any_answer',
+        date: new Date()
+      }, {
+        surveyId: new ObjectId(surveyId),
+        accountId: new ObjectId(accountId),
+        answer: 'any_answer',
+        date: new Date()
+      }, {
+        surveyId: new ObjectId(surveyId),
+        accountId: new ObjectId(accountId),
+        answer: 'any_other_answer',
+        date: new Date()
+      }, {
+        surveyId: new ObjectId(surveyId),
+        accountId: new ObjectId(accountId),
+        answer: 'any_other_answer',
+        date: new Date()
+      }])
+      const sut = makeSut()
+      const surveyResult = await sut.loadBySurveyId(surveyId)
+      expect(surveyResult).toBeTruthy()
+      expect(surveyResult.surveyId).toEqual(surveyId)
+      expect(surveyResult.answers[0].answer).toBe('any_other_answer')
+      expect(surveyResult.answers[0].count).toBe(2)
+      expect(surveyResult.answers[0].percent).toBe(50)
+      expect(surveyResult.answers[1].count).toBe(2)
+      expect(surveyResult.answers[1].percent).toBe(50)
+      expect(surveyResult.answers[2].count).toBe(0)
+      expect(surveyResult.answers[2].percent).toBe(0)
     })
   })
 })
