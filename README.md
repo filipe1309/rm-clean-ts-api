@@ -221,7 +221,7 @@ make up
 ```
 > Stop with `make down`
 
-> See Makefile for more information
+> See [Makefile](./Makefile) for more information
 
 > Access http://localhost:5050/api
 
@@ -229,7 +229,7 @@ make up
 
 ### Endpoints
 
-[Access here.](./api.http)
+[Access `api.http` here.](./api.http)
 
 ## :white_check_mark: Tests
 
