@@ -38,6 +38,5 @@ test-ci:
 test-clear:
 	npm run test:clear
 
-# Ex: make deploy, or make deploy msg="Deploy msg"
 deploy:
-	./deploy.sh -a $(msg)
+	./deploy.sh -a
