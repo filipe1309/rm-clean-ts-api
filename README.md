@@ -217,11 +217,15 @@ cd rm-clean-ts-api
 
 Up the container with tha API & DB:
 ```sh 
-npm run up
+make up
 ```
-> Stop with `npm run down`
+> Stop with `make down`
+
+> See Makefile for more information
 
 > Access http://localhost:5050/api
+
+> Access docs http://localhost:5050/api-docs
 
 ### Endpoints
 
@@ -230,25 +234,25 @@ npm run up
 ## :white_check_mark: Tests
 
 ```sh
-npm run test
+make test
 ```
 ```sh
-npn run test:verbose
+make test-verbose
 ```
 ```sh
-npn run test:unit
+make test-unit
 ```
 ```sh
-npn run test:integration
+make test-integration
 ```
 ```sh
-npn run test:staged
+make test-staged
 ```
 ```sh
-npn run test:ci
+make test-ci
 ```
 ```sh
-npn run test:clear
+make test-clear
 ```
 
 <!-- 
