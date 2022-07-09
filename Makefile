@@ -12,9 +12,6 @@ build:
 	npm run build
 #	docker run -it clean-node-api npm run build
 
-test-ci:
-	npm run test:ci
-
 test:
 	npm run test
 
