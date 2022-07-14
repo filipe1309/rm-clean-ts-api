@@ -55,7 +55,7 @@ describe('Survey Routes', () => {
   })
 
   describe('PUT /surveys/:surveyId/results', () => {
-    test('Should return 403 on save survey results without accessToken', async () => {
+    test('Should return 403 on save survey result without accessToken', async () => {
       await request(app)
         .put('/api/surveys/any_id/results')
         .send({
