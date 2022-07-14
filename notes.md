@@ -492,29 +492,14 @@ Surrogate-Control: no-store
 
 # Section 24: LoadSurveyResult API
 
-## CLASS-90
-
-## CLASS-91
-
-## CLASS-92
-
-## CLASS-93
-
-## CLASS-94
-
-## CLASS-95
-
-## CLASS-96
-
-## CLASS-97
-
-## CLASS-98
-
 ## CLASS-99
 
 ```
 make up
 ```
+
+# Section 25: Refactor
+
 ## CLASS-100
 
 ```
@@ -522,3 +507,6 @@ make run cmd="npm i -D faker"
 ```
 ## CLASS-101
 
+```
+npm i -D copyfiles
+```
