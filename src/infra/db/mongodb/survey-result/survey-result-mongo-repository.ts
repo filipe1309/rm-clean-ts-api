@@ -34,14 +34,14 @@ export class SurveyResultMongoRepository implements SaveSurveyResultRepository, 
           $sum: 1
         }
       })
-      .unwind('$data')
+      .unwind({ path: '$data' })
       .lookup({
         from: 'surveys',
         foreignField: '_id',
         localField: 'data.surveyId',
         as: 'survey'
       })
-      .unwind('$survey')
+      .unwind({ path: '$survey' })
       .group({
         _id: {
           surveyId: '$survey._id',
@@ -118,7 +118,7 @@ export class SurveyResultMongoRepository implements SaveSurveyResultRepository, 
           }
         }
       })
-      .unwind('$answers')
+      .unwind({ path: '$answers' })
       .group({
         _id: {
           surveyId: '$surveyId',

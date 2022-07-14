@@ -28,6 +28,7 @@ services:
     volumes:
       - ./dist/:/usr/src/clean-node-api/dist
       - ./package.json:/usr/src/clean-node-api/package.json
+      - /usr/src/clean-node-api/node_modules
     ports:
       - 5050:5050
       - 9222:9222

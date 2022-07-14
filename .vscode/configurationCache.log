@@ -1,0 +1,1 @@
+{"buildTargets":["build","deploy","down","run","test","test-ci","test-clear","test-integration","test-staged","test-unit","test-verbose","up"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

@@ -517,3 +517,8 @@ make up
 ```
 ## CLASS-100
 
+```
+make run cmd="npm i -D faker"
+```
+## CLASS-101
+
