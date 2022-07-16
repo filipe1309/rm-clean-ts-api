@@ -63,7 +63,6 @@ describe('AccountMongoRepository', () => {
       const sut = makeSut()
       const res = await accountCollection.insertOne(mockAddAccountParams())
       const fakeAccount = await accountCollection.findOne({ _id: new ObjectId(res.insertedId.toString()) })
-      console.log('fakeAccount', fakeAccount._id)
       expect(fakeAccount.accessToken).toBeFalsy()
       const accessToken = faker.datatype.uuid()
       await sut.updateAccessToken(fakeAccount._id.toString(), accessToken)
