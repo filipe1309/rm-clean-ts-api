@@ -516,3 +516,10 @@ npm i -D copyfiles
 
 ## CLASS-104
 
+```
+git config --edit --global
+[alias]
+git t "2.5.4"
+```
+## CLASS-105
+
