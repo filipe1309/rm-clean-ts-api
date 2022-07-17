@@ -1,6 +1,6 @@
 {
   "name": "rm-clean-ts-api",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "description": "# <p align=\"center\">Clean TS API</p>",
   "main": "index.js",
   "scripts": {
@@ -68,6 +68,7 @@
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
+    "mongo-round": "^1.0.0",
     "mongodb": "^4.3.1",
     "nodemon": "^2.0.15",
     "swagger-ui-express": "^4.3.0",
