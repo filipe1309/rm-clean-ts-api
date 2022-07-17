@@ -1,6 +1,6 @@
 {
   "name": "rm-clean-ts-api",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "description": "# <p align=\"center\">Clean TS API</p>",
   "main": "index.js",
   "scripts": {
