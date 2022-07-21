@@ -6,5 +6,6 @@ globalConfig.json
 .DS_Store
 
 data
+!tests/data
 !src/data
 .coveralls.yml
