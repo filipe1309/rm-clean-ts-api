@@ -3,7 +3,7 @@ import { HttpRequest } from '@/presentation/protocols'
 import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers'
 import { MissingParamError } from '@/presentation/errors'
 import { AuthenticationSpy, ValidationSpy } from '@/tests/presentation/mocks'
-import { throwError, mockAuthenticationParams } from '@/domain/test'
+import { throwError, mockAuthenticationParams } from '@/tests/domain/mocks'
 import { faker } from '@faker-js/faker'
 
 const mockRequest = (): HttpRequest => ({

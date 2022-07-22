@@ -3,7 +3,7 @@ import { MissingParamError, ServerError, EmailInUseError } from '@/presentation/
 import { HttpRequest } from '@/presentation/protocols'
 import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers'
 import { AuthenticationSpy, ValidationSpy, AddAccountSpy } from '@/tests/presentation/mocks'
-import { throwError } from '@/domain/test'
+import { throwError } from '@/tests/domain/mocks'
 import { faker } from '@faker-js/faker'
 
 const mockRequest = (): HttpRequest => {

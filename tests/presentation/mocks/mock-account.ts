@@ -2,7 +2,7 @@ import { AddAccount, AddAccountParams } from '@/domain/usecases/account/add-acco
 import { Authentication, AuthenticationParams } from '@/domain/usecases/account/authentication'
 import { LoadAccountByToken } from '@/domain/usecases/account/load-account-by-token'
 import { AccountModel } from '@/domain/models/account'
-import { mockAccountModel } from '@/domain/test'
+import { mockAccountModel } from '@/tests/domain/mocks'
 import { faker } from '@faker-js/faker'
 import { AuthenticationModel } from '@/domain/models/authentication'
 

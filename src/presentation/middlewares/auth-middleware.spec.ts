@@ -3,7 +3,7 @@ import { HttpRequest } from './auth-middleware-protocols'
 import { forbidden, ok, serverError } from '@/presentation/helpers'
 // import { AccessDeniedError } from '@/presentation/errors'
 import { LoadAccountByTokenSpy } from '@/tests/presentation/mocks'
-import { throwError } from '@/domain/test'
+import { throwError } from '@/tests/domain/mocks'
 import { AccessDeniedError } from '../errors'
 
 const mockRequest = (): HttpRequest => ({
