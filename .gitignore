@@ -9,3 +9,5 @@ data
 !tests/data
 !src/data
 .coveralls.yml
+
+.vscode/targets.log
