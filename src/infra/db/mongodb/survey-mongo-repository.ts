@@ -1,9 +1,9 @@
 import { MongoHelper } from '@/infra/db/mongodb'
 import { SurveyModel } from '@/domain/models/survey'
-import { AddSurveyParams } from '@/domain/usecases/survey/add-survey'
+import { AddSurveyParams } from '@/domain/usecases/add-survey'
 import { AddSurveyRepository } from '@/data/protocols/db/survey/add-survey-repository'
 import { LoadSurveysRepository } from '@/data/protocols/db/survey/load-surveys-repository'
-import { LoadSurveyById } from '@/domain/usecases/survey/load-survey-by-id'
+import { LoadSurveyById } from '@/domain/usecases/load-survey-by-id'
 import { ObjectId } from 'mongodb'
 import { QueryBuilder } from '.'
 

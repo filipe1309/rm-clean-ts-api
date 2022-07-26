@@ -1,6 +1,6 @@
 import { AddAccountRepository } from '@/data/protocols/db/account/add-account-repository'
 import { LoadAccountByEmailRepository } from '@/data/protocols/db/account/load-account-by-email-repository'
-import { AddAccountParams } from '@/domain/usecases/account/add-account'
+import { AddAccountParams } from '@/domain/usecases/add-account'
 import { mockAccountModel } from '@/tests/domain/mocks'
 import { AccountModel } from '@/domain/models/account'
 import { LoadAccountByTokenRepository } from '@/data/protocols/db/account/load-account-by-token-repository'
