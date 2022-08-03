@@ -1,6 +1,7 @@
 import { SurveyMongoRepository, MongoHelper } from '@/infra/db/mongodb'
 import { Collection, ObjectId } from 'mongodb'
 import { mockAddAccountParams, mockAddSurveyParams } from '@/tests/domain/mocks'
+// import FakeObjectId from 'bson-objectid'
 
 let surveyCollection: Collection
 let surveyResultCollection: Collection
@@ -80,9 +81,31 @@ describe('SurveyMongoRepository', () => {
       const res = await surveyCollection.insertOne(mockAddSurveyParams())
       const sut = makeSut()
       const survey = await sut.loadById(res.insertedId.toString())
-      console.log(res, survey)
       expect(survey).toBeTruthy()
       expect(survey.id).toBeTruthy()
     })
   })
+
+  describe('checkById()', () => {
+    test('Should return true if survey exists', async () => {
+      const res = await surveyCollection.insertOne(mockAddSurveyParams())
+      const sut = makeSut()
+      const exists = await sut.checkById(res.insertedId.toString())
+      expect(exists).toBe(true)
+    })
+
+    test('Should return false if survey doesnt exists', async () => {
+      const sut = makeSut()
+      const exists = await sut.checkById(mongoObjectId())
+      // const exists = await sut.checkById(FakeObjectId.generate())
+      expect(exists).toBe(false)
+    })
+  })
 })
+
+const mongoObjectId = function (): string {
+  const timestamp = (new Date().getTime() / 1000 | 0).toString(16)
+  return timestamp + 'xxxxxxxxxxxxxxxx'.replace(/[x]/g, function () {
+    return (Math.random() * 16 | 0).toString(16)
+  }).toLowerCase()
+}

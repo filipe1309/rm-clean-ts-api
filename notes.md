@@ -546,3 +546,7 @@ npm i mongo-round
 
 ## CLASS-115
 
+
+```sh
+npm i -D bson-objectid
+```
