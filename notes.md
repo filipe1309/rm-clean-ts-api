@@ -101,19 +101,8 @@ n
 ```sh
 npm test
 ```
-## CLASS-5
 
 # Section 2: SignUp API - Presentation Layer
-
-## CLASS-6
-
-## CLASS-7
-
-## CLASS-8
-
-## CLASS-9
-
-## CLASS-10
 
 # Section 3: Jest
 ## CLASS-11
@@ -131,9 +120,6 @@ npm i -D @types/validator
 ```
 
 # Section 5: SignUp API - Data Layer
-## CLASS-13
-
-## CLASS-14
 
 # Section 6: SignUp API - Infra Layer
 
@@ -153,7 +139,6 @@ npm i mongodb
 ```
 
 Verify binary version in jest-mongodb-config.js in a real app 
-## CLASS-17
 
 # Section 7: SignUp API - Main Layer
 
@@ -175,45 +160,13 @@ npm i -D supertest @types/supertest
 # Looks like the Filesystem lib
  npm i fast-glob
 ```
-## CLASS-20
-
 # Section 8: Log de Erro
-
-## CLASS-21
-
-## CLASS-22
-
-## CLASS-23
-
-## CLASS-24
-
-## CLASS-25
-
-## CLASS-26
 
 # Section 9: Login API - Presentation Layer
 
-## CLASS-27
-
-## CLASS-28
-
-## CLASS-29
-
-## CLASS-30
-
-## CLASS-31
-
-## CLASS-32
-
 # Section 10: Login API - Data Layer
 
-## CLASS-33
-
-## CLASS-34
-
 # Section 11: Segurança - Hash/Encrypt/Encode
-
-## CLASS-35
 
 ### Security 
 Hash - not reversible
@@ -222,7 +175,6 @@ Encrypt - reversible
 ### Transport
 Encoding - Used for transport information
 # Section 12: Login API - Infra Layer
-## CLASS-36
 
 ## CLASS-37
 
@@ -230,11 +182,8 @@ Encoding - Used for transport information
 npm i jsonwebtoken
 npm i @types/jsonwebtoken -D
 ```
-## CLASS-38
 
 # Section 13: Login API - Main Layer
-
-## CLASS-39
 
 ## CLASS-40
 
@@ -320,8 +269,6 @@ docker run -p 5050:5050 clean-node-api
 # list all containers
 docker-compose up
 ```
-## CLASS-44
-
 ## CLASS-45
 
 ```sh
@@ -342,14 +289,11 @@ npm test
 
 # Section 15: SignUp API - Fixes
 
-## CLASS-47
-
 ## CLASS-48
 
 src/main/factories/usecases/add-account/db-add-account-factory.ts
 
 https://github.com/rmanguinho/clean-ts-api/commit/547a1bde6bf9ffe079d913dab1d5e1a53d679ea7
-## CLASS-49
 
 ## CLASS-50
 ```sh
@@ -358,24 +302,7 @@ git tag -a "1.2.3" -m"1.2.3"
 
 # Section 16: AddSurvey API
 
-## CLASS-51
-
-## CLASS-52
-
-## CLASS-53
-
-## CLASS-54
-
 # Section 17: Criando Middleware de Autenticação
-## CLASS-55
-
-## CLASS-56
-
-## CLASS-57
-
-## CLASS-58
-
-## CLASS-59
 
 ## CLASS-60
 ```sh
@@ -397,9 +324,6 @@ npm i coveralls -D
 ```sh
 npm i mockdate -D
 ```
-## CLASS-63
-
-## CLASS-64
 
 ## CLASS-65
 
@@ -418,38 +342,8 @@ db.accounts.update({_id: ObjectId("622a9f804c4675be2f859d28")}, {$set: {role: 'a
 ```sh
 npm i module-alias
 ```
-## CLASS-67
-
-## CLASS-68
 
 # Section 21: SaveSurveyResult API
-
-## CLASS-69
-## CLASS-70
-
-## CLASS-71
-
-## CLASS-72
-
-## CLASS-73
-
-## CLASS-74
-
-## CLASS-75
-
-## CLASS-76
-
-## CLASS-77
-
-# Section 22: Refactor
-
-## CLASS-78
-
-## CLASS-79
-
-## CLASS-80
-
-## CLASS-81
 
 ## CLASS-82
 
@@ -478,17 +372,6 @@ Pragma: no-cache
 Expires: 0
 Surrogate-Control: no-store
 ```
-## CLASS-84
-
-## CLASS-85
-
-## CLASS-86
-
-## CLASS-87
-
-## CLASS-88
-
-## CLASS-89
 
 # Section 24: LoadSurveyResult API
 
@@ -510,9 +393,6 @@ make run cmd="npm i -D faker"
 ```
 npm i -D copyfiles
 ```
-## CLASS-102
-
-## CLASS-103
 
 ## CLASS-104
 
@@ -526,23 +406,8 @@ git t "2.5.4"
 ```
 npm i mongo-round
 ```
-## CLASS-106
 
-## CLASS-107
-
-## CLASS-108
-
-## CLASS-109
-
-## CLASS-110
-
-## CLASS-111
-
-## CLASS-112
-
-## CLASS-113
-
-## CLASS-114
+# Section 26: Improving Architecture
 
 ## CLASS-115
 
@@ -550,13 +415,12 @@ npm i mongo-round
 ```sh
 npm i -D bson-objectid
 ```
-## CLASS-116
-
-## CLASS-117
-
-## CLASS-118
-
-## CLASS-119
+# Section 27: GraphQL
 
 ## CLASS-120
 
+```sh
+docker exec -it 0968043e20c1adade18c95cec9a23ed9d18376520d52db74faf141ec561307fa bash 
+npm i apollo-server-express graphql
+npm i -D @types/graphql
+```
