@@ -430,3 +430,5 @@ http://localhost:5050/graphql
 https://studio.apollographql.com/sandbox/explorer
 ## CLASS-121
 
+## CLASS-122
+
