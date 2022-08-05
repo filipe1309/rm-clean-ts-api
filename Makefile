@@ -1,5 +1,5 @@
-up: build
-	docker-compose up -d
+up:
+	docker-compose up -d --build
 
 # Ex: make run cmd="sh"
 run:
@@ -9,8 +9,7 @@ down:
 	docker-compose down
 
 build:
-	npm run build
-#	docker run -it clean-node-api npm run build
+	docker run -it clean-node-api npm run build
 
 test:
 	npm run test
