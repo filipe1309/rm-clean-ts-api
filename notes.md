@@ -424,3 +424,7 @@ docker exec -it 0968043e20c1adade18c95cec9a23ed9d18376520d52db74faf141ec561307fa
 npm i apollo-server-express graphql
 npm i -D @types/graphql
 ```
+
+http://localhost:5050/graphql
+
+https://studio.apollographql.com/sandbox/explorer

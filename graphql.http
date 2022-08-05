@@ -1,0 +1,12 @@
+POST http://localhost:5050/graphql
+Content-Type: application/json
+
+{ "query":"query { __typename }" }
+
+### Query login
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+
+{ "query":"query { login(email: \"\", password: \"\") { accessToken name } }" }
+
