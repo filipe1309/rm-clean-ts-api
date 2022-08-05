@@ -9,7 +9,7 @@ down:
 	docker-compose down
 
 build:
-	docker run -it clean-node-api npm run build
+	docker exec -it api-container npm run build
 
 test:
 	npm run test

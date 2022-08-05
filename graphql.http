@@ -10,3 +10,9 @@ Content-Type: application/json
 
 { "query":"query { login(email: \"\", password: \"\") { accessToken name } }" }
 
+### Query login ex2
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+
+{ "query":"query { login(email: \"john.doe2@mail.com\", password: \"123456\") { accessToken name } }" }
