@@ -434,3 +434,7 @@ https://studio.apollographql.com/sandbox/explorer
 
 ## CLASS-123
 
+```
+npm i graphql-iso-date
+npm i -D @types/graphql-iso-date
+```
