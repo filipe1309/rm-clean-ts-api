@@ -25,3 +25,36 @@ POST http://localhost:5050/graphql
 Content-Type: application/json
 
 { "query":"mutation { signUp(name: \"John\", email: \"john.doe222@mail.com\", password: \"12345\", passwordConfirmation: \"12345\") { accessToken name } }" }
+
+### Query Surveys
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY2MTM4Mzg3M30.MucpR_dpbJns_BtrwVjXAN4TkN2hWJH6KQ7g34fw8lQ
+
+query {
+  surveys {
+    id
+    question
+    answers {
+      image
+      answer
+    }
+    date
+  }
+}
+
+### Query login ex3
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query{ 
+  login(email: "john.doe2@mail.com", password: "123456") { 
+    accessToken 
+    name 
+  }
+}
+
