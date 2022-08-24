@@ -440,3 +440,12 @@ npm i -D @types/graphql-iso-date
 ```
 ## CLASS-124
 
+https://www.apollographql.com/docs/apollo-server/schema/creating-directives/
+
+https://www.graphql-tools.com/docs/schema-directives#using-schema-directives
+
+```
+npm install @graphql-tools/schema @graphql-tools/utils
+
+docker logs --tail 1000 -f api-container
+```
