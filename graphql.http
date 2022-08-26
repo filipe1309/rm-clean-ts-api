@@ -51,10 +51,51 @@ POST http://localhost:5050/graphql
 Content-Type: application/json
 X-REQUEST-TYPE: GraphQL
 
-query{ 
+query { 
   login(email: "john.doe2@mail.com", password: "123456") { 
     accessToken 
     name 
   }
 }
 
+### Query survey result
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY2MTM4Mzg3M30.MucpR_dpbJns_BtrwVjXAN4TkN2hWJH6KQ7g34fw8lQ
+
+query { 
+  surveyResult(surveyId: "623787417bed337c7e649527") {
+    surveyId
+    question
+    date
+    answers {
+      image
+      isCurrentAccountAnswer
+      percent
+      count
+    }
+  }
+}
+
+### Mutation save survey result
+
+POST http://localhost:5050/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGFjMjAwNWE2MTAwMzU4ZDkyNyIsImlhdCI6MTY2MTM4Mzg3M30.MucpR_dpbJns_BtrwVjXAN4TkN2hWJH6KQ7g34fw8lQ
+
+mutation { 
+  saveSurveyResult(surveyId: "623787417bed337c7e649527", answer: "Answer 1") {
+    surveyId
+    question
+    date
+    answers {
+      image
+      isCurrentAccountAnswer
+      percent
+      count
+    }
+  }
+}
