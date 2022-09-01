@@ -453,3 +453,8 @@ docker logs --tail 1000 -f api-container
 
 ## CLASS-126
 
+```
+npm i -D apollo-server-integration-testing
+
+docker exec -it  api-container sh
+```
